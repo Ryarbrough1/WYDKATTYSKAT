@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://labondemand.com/LabProfile/Instructions/137513 -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HOT: What You Don't Know that You Should Know About Tableau</title>
+
+
+    <script src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/jquery.min.js.download" type="text/javascript"></script>
+    <script src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/Localize" type="text/javascript"></script>
+    <script src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/showdown.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/prettify.css">
+    <script src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/yaml.min.js.download"></script>
+    <script src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/LocalizeTo" type="text/javascript"></script>
+    <link href="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/CloudClient.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        body, html {
+            font-family: Segoe UI,Tahoma,Verdana,Arial,sans-serif;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+            background-color: #efefef;
+            color: #000;
+            height: 100%;
+        }
+
+        body {
+            overflow: auto;
+        }
+
+        #outputWrapper {
+            background-color: #efefef;
+            min-height: 100%;
+        }
+
+        .instructionsPreview {
+            padding: 20px;
+            height: 100%;
+        }
+
+            .instructionsPreview .page {
+                position: relative;
+                display: block !important;
+                padding: 15px 20px;
+                background-color: #fff;
+                page-break-after: always;
+                min-height: 650px;
+            }
+
+                .instructionsPreview .page:not(:first-child) {
+                    margin-top: 20px;
+                }
+
+        @media print {
+            body, html {
+                height: auto;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+
+            div {
+                page-break-inside: avoid;
+            }
+
+            #outputWrapper {
+                background-color: transparent;
+            }
+
+            .instructionsPreview {
+                padding: 0;
+            }
+
+                .instructionsPreview .page:not(:first-child) {
+                    margin-top: 0px;
+                }
+        }
+
+        @page {
+            margin-left: 1.5cm;
+            margin-right: 1.5cm;
+            margin-top: 1.5cm;
+            margin-bottom: 1.5cm;
+        }
+    </style>
+    <link id="themeStylesheet" href="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/Green.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="outputWrapper">
+        <div id="instructions" class="instructionsPreview instructions"><div class="page" id="page0"><h1 id="welcome-user_firstname">Welcome {USER_FIRSTNAME}!</h1>
+<p>Thank you for joining us for "What you Should know about Tableau that you don't Know about Tableau"!</p>
+<p>This side panel will contain all the Step-by-Step Instructions, Resources links, and helpful tips required to complete this course. Feel free to follow along, as  </p>
+<p>To get started log into the virtual machine provided please use <span class="typeText" title="Type Text"><strong>LabUser</strong></span> and the password <span class="typeText" title="Type Text"><strong>Passw0rd!</strong></span></p>
+<p>Notice the green test above?  You an click that and the machine will type that text whereever the cursor is targeted.</p>
+<p>At this time please enjoy the lab and click around, this is your isolated instance and nothing you do will persist unless you capture a differencing disk.  And we'll get into that during our training!</p>
+<p>Thanks for being part of TC 23 and we look forward to this journey together.</p>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">Important</span><span class="pln"> </span><span class="typ">Hot</span><span class="pln"> </span><span class="typ">Keys</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">Session</span><span class="pln">
+
+    </span><span class="typ">Copy</span><span class="pln">
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Windows</span><span class="pun">:</span><span class="pln"> CTRL </span><span class="pun">+</span><span class="pln"> C
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Mac</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Command</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> C
+
+    </span><span class="typ">Paste</span><span class="pln">
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Windows</span><span class="pun">:</span><span class="pln"> CTRL </span><span class="pun">+</span><span class="pln"> P
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Mac</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Command</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> P
+
+    </span><span class="typ">Preselect</span><span class="pln"> </span><span class="typ">Agg</span><span class="pln">
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Windows</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Right</span><span class="pln"> </span><span class="typ">Click</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Drag</span><span class="pln">
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Mac</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Command</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Option</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">One</span><span class="pln"> </span><span class="typ">Finger</span><span class="pln"> </span><span class="typ">Click</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Drag</span><span class="pln">
+
+    </span><span class="typ">Duplicate</span><span class="pln">
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Windows</span><span class="pun">:</span><span class="pln"> CTRL </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Left</span><span class="pln"> </span><span class="typ">Click</span><span class="pln"> </span><span class="pun">+</span><span class="pln">  </span><span class="typ">Drag</span><span class="pln">
+        </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Mac</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Command</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">One</span><span class="pln"> </span><span class="typ">Finger</span><span class="pln"> </span><span class="typ">Click</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Drag</span></code></pre>
+</div><div class="page" id="page1">
+<h1 id="rounded-bar-chart">Rounded Bar Chart</h1>
+<p>1) <strong>Rounded Bar Chart</strong> </p>
+<p>Steps:</p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex0"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex0"><span></span></label> 1.1) Double Click <strong>[SALES]</strong></li>
+<li class="task-list-item" id="taskIndex1"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex1"><span></span></label> 1.2) Double Click <strong>[Sub-Category]</strong> </li>
+<li class="task-list-item" id="taskIndex2"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex2"><span></span></label> 1.3) Select <em>Rotate Axis</em> button 
+<img src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/0r4q5h2o.jpg" alt="0r4q5h2o.jpg"> &amp; <em>Sort Button</em> (Desc) 
+<img src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/az0n5nxe.jpg" alt="az0n5nxe.jpg"></li>
+<li class="task-list-item" id="taskIndex3"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex3"><span></span></label> 1.4) Place <strong>[Profit]</strong> on Color (Or drop directly on Canvas)</li>
+<li class="task-list-item" id="taskIndex4"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex4"><span></span></label> 1.5) Under Analysis, select: “<strong>Create Calculated Field</strong>” and create calculation “<strong>[Min(0)]</strong>”</li>
+<li class="task-list-item" id="taskIndex5"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex5"><span></span></label> 1.6) Place <strong>[Measure Names]</strong> onto Filters (keep only <strong>[SALES]</strong> and <strong>[MIN(0)]</strong>) THEN place <strong>[Measure Names]</strong> again on Columns</li>
+<li class="task-list-item" id="taskIndex6"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex6"><span></span></label> 1.7) Place <strong>[Measure Values]</strong> on Rows</li>
+<li class="task-list-item" id="taskIndex7"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex7"><span></span></label> 1.8) Change chart type to <strong><em>Line</em></strong> on the Marks Card</li>
+<li class="task-list-item" id="taskIndex8"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex8"><span></span></label> 1.9) Place <strong>[Measure Names]</strong> onto Path</li>
+</ul>
+<blockquote class="knowledge">
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="typ">Show</span><span class="pln"> </span><span class="typ">Me</span><span class="pln"> </span><span class="typ">Selections</span><span class="pln">
+    </span><span class="pun">-</span><span class="typ">Measure</span><span class="pln"> </span><span class="typ">Values</span><span class="pln"> to </span><span class="typ">Filters</span><span class="pln">
+    </span><span class="pun">-</span><span class="typ">Double</span><span class="pln"> </span><span class="typ">Click</span><span class="pln"> </span><span class="typ">Order</span><span class="pln"> </span><span class="kwd">of</span><span class="pln"> </span><span class="typ">Operations</span><span class="pln">
+    </span><span class="pun">-</span><span class="typ">Rounded</span><span class="pln"> bar chart</span></code></pre>
+</blockquote><div class="moreKnowledge"><a href="https://labondemand.com/LabProfile/Instructions/137513#" class="moreKnowledgeLink" style="display: none;">more...</a></div>
+</div><div class="page" id="page2">
+<h1 id="map">Map</h1>
+<p>2) <strong>Map</strong></p>
+<p>Steps:</p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex9"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex9"><span></span></label> 2.1) Right Click <strong>[Location String]</strong> and select <em>Transform</em> → <em>Custom Split</em></li>
+<li class="task-list-item" id="taskIndex10"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex10"><span></span></label> 2.2) Under <em>Separator</em> Enter a comma ( , ) → Change <em>Split Off</em> from <em>"First"</em> to <em>"All"</em></li>
+<li class="task-list-item" id="taskIndex11"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex11"><span></span></label> 2.3) Right Click to Rename Fields <ul>
+<li><strong><em>Location String - Split 1</em> → <em>Region</em> </strong></li>
+<li><strong><em>Location String - Split 2</em> → <em>State</em> </strong></li>
+<li><strong><em>Location String - Split 3</em> → <em>City</em> </strong></li>
+<li><strong><em>Location String - Split 4</em> → <em>Delete This Split</em></strong></li></ul></li>
+<li class="task-list-item" id="taskIndex12"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex12"><span></span></label> 2.4) Right Click fields again to change Geographic Role <ul>
+<li><strong><em>State</em> → <em>State/Province</em> </strong></li>
+<li><strong><em>Region</em> → <em>Create From</em> → <em>State</em> </strong></li>
+<li><strong><em>City</em> → <em>City</em> </strong></li></ul></li>
+<li class="task-list-item" id="taskIndex13"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex13"><span></span></label> 2.5) Double Click on <strong>[State]</strong></li>
+<li class="task-list-item" id="taskIndex14"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex14"><span></span></label> 2.6) Add <strong>[Profit]</strong> to Color </li>
+<li class="task-list-item" id="taskIndex15"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex15"><span></span></label> 2.7) At the top of the screen, select <strong>Map</strong> → <strong>Background Layers</strong></li>
+<li class="task-list-item" id="taskIndex16"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex16"><span></span></label> 2.8) Deselect all checked boxes</li>
+<li class="task-list-item" id="taskIndex17"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex17"><span></span></label> 2.9) Right Click on <em>"1) Rounded Bar Chart"</em> and select <em>Copy Formatting</em> then Right click on the current sheet and select <em>"Paste Formatting"</em><!--KNOWLEDGE--></li>
+</ul>
+<blockquote>
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Quick</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="typ">Transformations</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Map</span><span class="pln"> formatting
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Quick</span><span class="pln"> </span><span class="typ">Map</span><span class="pln"> creation 
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Fast</span><span class="pln"> fact</span><span class="pun">-</span><span class="pln">check </span></code></pre>
+</blockquote>
+</div><div class="page" id="page3">
+<h1 id="map-drill-down">Map Drill Down</h1>
+<p>3) <strong>Map Drill Down</strong>
+Steps: </p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex18"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex18"><span></span></label> 3.1) Right Click the <em>"Map"</em> Sheet and select <em>Duplicate</em></li>
+<li class="task-list-item" id="taskIndex19"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex19"><span></span></label> 3.2) Drag <strong>[City]</strong> over the map and place on the pop up menu <em>Map Layers</em> in the top left corner</li>
+<li class="task-list-item" id="taskIndex20"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex20"><span></span></label> 3.3) On the marks card, select the <em>State</em> Tab and double click a blank space on the Marks Card to pull up the In Shelf Editor and type “1” and press enter</li>
+<li class="task-list-item" id="taskIndex21"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex21"><span></span></label> 3.4) Remove <strong>[Profit]</strong> from color on the <em>"State"</em> Tab</li>
+<li class="task-list-item" id="taskIndex22"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex22"><span></span></label> 3.5) Click the Color button on the marks card, under the <em>"State"</em> Tab and select "More Colors" </li>
+<li class="task-list-item" id="taskIndex23"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex23"><span></span></label> 3.6) Select <em>"Pick screen color"</em> and click on any item on your screen to set that color as the background
+
+<img src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/34ly78cu.jpg" alt="34ly78cu.jpg"></li>
+<li class="task-list-item" id="taskIndex24"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex24"><span></span></label> 3.6) Select the City Tab and Place <strong>[Profit]</strong> on Color and <strong>[Sales]</strong> on Size<!--KNOWLEDGE--></li>
+</ul>
+<blockquote>
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Map</span><span class="pln"> </span><span class="typ">Layers</span><span class="pln"> 
+</span><span class="pun">-</span><span class="typ">Map</span><span class="pln"> </span><span class="typ">Shading</span><span class="pln"> </span><span class="typ">Techniques</span><span class="pln"> 
+</span><span class="pun">-</span><span class="typ">Create</span><span class="pln"> calcs </span><span class="kwd">in</span><span class="pln"> shelf
+</span><span class="pun">-</span><span class="typ">Pick</span><span class="pln"> </span><span class="typ">Screen</span><span class="pln"> </span><span class="typ">Color</span></code></pre>
+</blockquote>
+</div><div class="page" id="page4">
+<h1 id="heat-map">Heat Map</h1>
+<p>4) <strong>Heat Map</strong>
+Steps: </p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex25"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex25"><span></span></label> 4.1) Right click drag (For Mac: Option + Command + Left Click)  <strong>[Order Date]</strong> on to Columns and select <em>YEARS</em> when prompted</li>
+<li class="task-list-item" id="taskIndex26"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex26"><span></span></label> 4.2) Hold the <em>CTRL</em> button (Command on Mac) + left click and drag <strong>[Year(Order Date)]</strong> onto rows</li>
+<li class="task-list-item" id="taskIndex27"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex27"><span></span></label> 4.3) Change the aggregation from <em>YEAR</em> to <em>Month</em> for the Pill on <em>Rows</em></li>
+<li class="task-list-item" id="taskIndex28"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex28"><span></span></label> 4.4) Place <strong>[Sales]</strong> onto Color</li>
+<li class="task-list-item" id="taskIndex29"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex29"><span></span></label> Optional: Select the <em>color</em> button on the marks card and add a border that matches your background<!--KNOWLEDGE--></li>
+</ul>
+<blockquote>
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Custom</span><span class="pln"> </span><span class="typ">Heat</span><span class="pln"> </span><span class="typ">Map</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Right</span><span class="pln"> </span><span class="typ">Click</span><span class="pln"> </span><span class="typ">Drag</span><span class="pln"> to preselect aggregation</span><span class="pun">!</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Duplicate</span><span class="pln"> </span><span class="typ">Fields</span><span class="pln"> </span><span class="kwd">with</span><span class="pln"> CTRL </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Drag</span><span class="pln"> </span></code></pre>
+</blockquote>
+</div><div class="page" id="page5">
+<h1 id="shout-out">Shout Out</h1>
+<p>5) <strong>Shout Out</strong></p>
+<p>Steps: </p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex30"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex30"><span></span></label> 5.1) Double Click <strong>[Measure Names]</strong></li>
+<li class="task-list-item" id="taskIndex31"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex31"><span></span></label> 5.2) Drag <strong>[Measure Names]</strong> to the Filters Shelf and deselect everything Except: <strong>[Sales], [Profit], [Quantity], [Discount]</strong></li>
+<li class="task-list-item" id="taskIndex32"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex32"><span></span></label> 5.3) <em>CTRL + Drag</em> <strong>[Measure Names]</strong> to Text</li>
+<li class="task-list-item" id="taskIndex33"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex33"><span></span></label> 5.4) Click the <em>Text Button</em> on the <em>Marks Card</em> select <em>alignment</em> and align the text to <em>CENTER</em> and <em>MIDDLE</em> respectively </li>
+<li class="task-list-item" id="taskIndex34"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex34"><span></span></label> 5.5) Edit the Text and Change the <strong>[Measure Values]</strong> and <strong>[Measure Names]</strong> Fields to your liking (we suggest Increasing the font size of <strong>[Measure Values]</strong> and changing the color of <strong>[Measure Names]</strong></li>
+<li class="task-list-item" id="taskIndex35"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex35"><span></span></label> 5.4) Right Click <strong>[Discount]</strong> on the fields shelf and select:<ul>
+<li>Default Properties → <em>Aggregation</em> → <em>Average</em></li>
+<li>Default Properties → <em>Number Format</em> → <em>Percent</em> → 0 decimal points</li></ul></li>
+<li class="task-list-item" id="taskIndex36"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex36"><span></span></label> 5.5) At the top of the screen change the view from <em>“Standard”</em> to <em>“Entire View”</em> </li>
+</ul>
+<blockquote class="knowledge">
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Custom</span><span class="pln"> </span><span class="typ">Shout</span><span class="pln"> </span><span class="kwd">out</span><span class="pln"> </span><span class="typ">View</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Text</span><span class="pln"> </span><span class="typ">Formatting</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Default</span><span class="pln"> </span><span class="typ">Formatting</span></code></pre>
+</blockquote><div class="moreKnowledge"><a href="https://labondemand.com/LabProfile/Instructions/137513#" class="moreKnowledgeLink" style="display: none;">more...</a></div>
+</div><div class="page" id="page6">
+<h1 id="bump-chart">Bump Chart</h1>
+<p>6) <strong>Bump Chart - Part. 1</strong>
+Steps:</p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex37"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex37"><span></span></label> 6.1) Right Click Drag <strong>[Order Date]</strong> to Columns and select <em>“Year Order Date”</em></li>
+<li class="task-list-item" id="taskIndex38"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex38"><span></span></label> 6.2) Place <strong>[Sales]</strong> on to the Marks Card</li>
+<li class="task-list-item" id="taskIndex39"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex39"><span></span></label> 6.3) Place <strong>[Region]</strong> on to the Marks Card</li>
+<li class="task-list-item" id="taskIndex40"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex40"><span></span></label> 6.3) Double click the white space on Rows and type: <em>Index()</em></li>
+<li class="task-list-item" id="taskIndex41"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex41"><span></span></label> 6.4) Materialize this Calculation by using <em>CTRL + Drag</em> to place it on the Fields Shelf</li>
+<li class="task-list-item" id="taskIndex42"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex42"><span></span></label> 6.5) Right Click the <strong>[Index]</strong> Field on Rows and Select “Edit Table Calculation”</li>
+<li class="task-list-item" id="taskIndex43"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex43"><span></span></label> 6.6) In the Table Calculation Editor under “Compute Using” select <em>Specific</em> <em>Dimension</em></li>
+<li class="task-list-item" id="taskIndex44"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex44"><span></span></label> 6.7) Make sure the boxes next to “Year of Order Date” and “Region” are both Selected</li>
+<li class="task-list-item" id="taskIndex45"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex45"><span></span></label> 6.8) Make the specified selections for the following menu options: <ul>
+<li>At the Level → Deepest</li>
+<li>Restarting every → Year of Order Date</li>
+<li>Sort Order → Custom Sort → <strong>[Sales]</strong> → <em>SUM</em> → <em>Desc</em>
+-
+<img src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/zeb160b4.jpg" alt="zeb160b4.jpg"></li></ul></li>
+<li class="task-list-item" id="taskIndex46"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex46"><span></span></label> 6.9) Add the <strong>[region]</strong> field on color</li>
+</ul>
+<p></p></div><div class="page" id="page7">
+6) <strong>Bump Chart - Part. 2</strong><p></p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex47"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex47"><span></span></label> 6.10) Edit the Axis on the left hand side by right clicking on the axis and selecting the edit option. Click the checkbox labeled "Reverse"</li>
+<li class="task-list-item" id="taskIndex48"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex48"><span></span></label> 6.11) Duplicate the <strong>[Index]</strong> function on rows by using  CTRL + Drag  and dragging the copy to it's right</li>
+<li class="task-list-item" id="taskIndex49"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex49"><span></span></label> 6.12) Right click the <strong>[Index]</strong> pill on the left hand side and select “Dual Axis”</li>
+<li class="task-list-item" id="taskIndex50"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex50"><span></span></label> 6.13) Right click on the left hand Axis on the view and select <em>“Synchronize axis”</em> from the pop up menu</li>
+<li class="task-list-item" id="taskIndex51"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex51"><span></span></label> 6.14) hide the axis by right clicking and selecting “Hide Axis”</li>
+<li class="task-list-item" id="taskIndex52"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex52"><span></span></label> 6.15) Under the second <em>“Index”</em> tab on the Marks Card, change the view type from <em>“Line”</em> to <em>“Circle”</em> by clicking the drop down</li>
+</ul>
+<blockquote class="knowledge">
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Bump</span><span class="pln"> </span><span class="typ">Chart</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Index</span><span class="pln"> </span><span class="kwd">function</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Dual</span><span class="pln"> </span><span class="typ">Axis</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Materialize</span><span class="pln"> </span><span class="typ">Calculations</span></code></pre>
+</blockquote><div class="moreKnowledge"><a href="https://labondemand.com/LabProfile/Instructions/137513#" class="moreKnowledgeLink" style="display: none;">more...</a></div>
+</div><div class="page" id="page8">
+<h1 id="calendar">Calendar</h1>
+<p>7) <strong>Calendar - Part. 1</strong>
+Steps:</p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex53"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex53"><span></span></label> 7.1) Right Click Drag <strong>[Order Date]</strong> to Columns and select <em>Month of Order Date</em></li>
+<li class="task-list-item" id="taskIndex54"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex54"><span></span></label> 7.2) Using <em>CTRL + Drag</em>, duplicate <strong>[MONTH(Order Date)]</strong> twice placing the new copies to the right of the original</li>
+<li class="task-list-item" id="taskIndex55"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex55"><span></span></label> 7.3) change the aggregations to <em>YEAR</em> and <em>WEEKDAY</em>  respectively (weekday is located under the "more" option) </li>
+<li class="task-list-item" id="taskIndex56"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex56"><span></span></label> 7.4) Use <em>CTRL + Drag</em>  one more time except instead of adding the copy to columns, add the new pill to rows and change the aggregation to <em>WEEK</em> (<em>WEEK</em> is located under the "more" option but label <em>WEEK NUMBER</em>)</li>
+<li class="task-list-item" id="taskIndex57"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex57"><span></span></label> 7.5) Add <strong>[Sales]</strong> OR <strong>[Profit]</strong> onto Color
+
+<img src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/lpyhq6wp.jpg" alt="lpyhq6wp.jpg"></li>
+<li class="task-list-item" id="taskIndex58"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex58"><span></span></label> 7.6) Right Click Drag <strong>[Order Date]</strong> to the filters shelf and select “Month / Year“. Filter to any Date</li>
+</ul>
+<p></p></div><div class="page" id="page9">
+7) <strong>Calendar - Part. 2</strong><p></p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex59"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex59"><span></span></label> 7.7) Create a new sheet and select the Data Source <em>"Data Scaffold"</em> in the top left corner</li>
+<li class="task-list-item" id="taskIndex60"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex60"><span></span></label> 7.8) Place the field <strong>[Date]</strong> on rows then right click the pill to change the aggregation: <ul>
+<li><strong>Exact Date → Discrete</strong></li>
+<li>
+<img src="./HOT_ What You Don&#39;t Know that You Should Know About Tableau_files/wab6r9g8.jpg" alt="wab6r9g8.jpg"></li></ul></li>
+<li class="task-list-item" id="taskIndex61"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex61"><span></span></label> 7.9) While holding the <em>Shift Key</em> Select the top row and bottom row to highlight every cell in the column and use the keyboard shortcut CTRL + C (Command + C on Mac) to copy the Table</li>
+<li class="task-list-item" id="taskIndex62"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex62"><span></span></label> 7.10) Return to the Data source view for our “Sample Superstore” Data source and use the shortcut CTRL + V (Command + V) to Paste in the new data.</li>
+<li class="task-list-item" id="taskIndex63"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex63"><span></span></label> 7.11) Link the new data set to Superstore using <strong>[Order Date]</strong> = <strong>[Date]</strong> </li>
+<li class="task-list-item" id="taskIndex64"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex64"><span></span></label> 7.12) Return to the <em>"Calendar Sheet"</em>. On the shelf, right click the field <strong>[Order Date]</strong> and select the <em>“Replace Reference”</em> option. when prompted replace <strong>[Order Date]</strong> with <strong>[Date]</strong></li>
+<li class="task-list-item" id="taskIndex65"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex65"><span></span></label> 7.13) Add DAY <strong>[Date]</strong> onto text </li>
+</ul>
+<blockquote class="knowledge">
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Copy</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="typ">Paste</span><span class="pln"> </span><span class="typ">Data</span><span class="pln"> </span><span class="typ">Set</span><span class="pln"> 
+</span><span class="pun">-</span><span class="typ">Replace</span><span class="pln"> </span><span class="typ">Reference</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Calendar</span><span class="pln"> </span><span class="typ">Chart</span><span class="pln"> </span><span class="typ">Type</span></code></pre>
+</blockquote><div class="moreKnowledge"><a href="https://labondemand.com/LabProfile/Instructions/137513#" class="moreKnowledgeLink" style="display: none;">more...</a></div>
+</div><div class="page" id="page10">
+<h1 id="bonus-viz-in-tooltip">Bonus: Viz in Tooltip</h1>
+<p>8) <strong>Viz In Tooltip</strong>
+Steps:</p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex66"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex66"><span></span></label> 8.1) Double Click (in order) on the following fields:  <strong>[Customer Name], [Order ID], [Product Name], [Sales], [Profit], [Discount]</strong></li>
+<li class="task-list-item" id="taskIndex67"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex67"><span></span></label> 8.2) Change fit from “Standard“ to ”Fit Entire View“ </li>
+<li class="task-list-item" id="taskIndex68"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex68"><span></span></label> 8.3) Navigate to the calendar sheet and select the <em>tooltip</em> button on the marks card to edit the tooltip</li>
+<li class="task-list-item" id="taskIndex69"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex69"><span></span></label> 8.4) clear the tool tip and select the <em>“Insert”</em> drop down. Select the sheet titled <em>“Tooltip”</em> to insert the sheet into the tooltip </li>
+<li class="task-list-item" id="taskIndex70"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex70"><span></span></label> 8.5) In the embedd string, edit the "maxwidth" to be 500 or higher</li>
+</ul>
+<blockquote class="knowledge">
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Viz</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> </span><span class="typ">Tooltip</span></code></pre>
+</blockquote><div class="moreKnowledge"><a href="https://labondemand.com/LabProfile/Instructions/137513#" class="moreKnowledgeLink" style="display: none;">more...</a></div>
+</div><div class="page" id="page11">
+<h1 id="all-together-now-building-our-dashboard">All Together Now! Building our Dashboard</h1>
+<p>9) <strong>Building Our Dashboard</strong></p>
+<p>Steps: </p>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex71"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex71"><span></span></label> 9.1) At the top of the screen, select the Dashboard tab → Format → Background and choose a background color of your choice from the dropdown on the lefthand side.</li>
+<li class="task-list-item" id="taskIndex72"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex72"><span></span></label> 9.2) Drag out the “Map” sheet and place it on the dashboard</li>
+<li class="task-list-item" id="taskIndex73"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex73"><span></span></label> 9.3) Drag out the “Shout Out” Sheet and place it above the map</li>
+<li class="task-list-item" id="taskIndex74"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex74"><span></span></label> 9.4) Toggle the “Tiled/Floating” button on the bottom so that “Floating” is selected. Drag our a horizontal container</li>
+<li class="task-list-item" id="taskIndex75"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex75"><span></span></label> 9.5) Change the Tiled/Floating button back to tiled, and place the Rounded Bar Chart, Bump Chart, and Heat Map, sheets into the container </li>
+<li class="task-list-item" id="taskIndex76"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex76"><span></span></label> 9.6) highlight the container by double clicking it and then select the drop down in the top right corner. Change the type from “Floating” to “Tiled”</li>
+<li class="task-list-item" id="taskIndex77"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex77"><span></span></label> 9.7) After the Container has snapped onto the grid, select it and drag it under our map</li>
+<li class="task-list-item" id="taskIndex78"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex78"><span></span></label> 9.8) Change the toggle back to “Floating” and drag the “Map Drilldown” Sheet to the left of the map and the “Calendar Sheet” to the right of the map. </li>
+</ul>
+<blockquote class="knowledge">
+  <hr>
+<pre><code class="prettyprint prettyprinted" style=""><span class="typ">What</span><span class="pln"> we learned</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Arrangement</span><span class="pln"> </span><span class="typ">Via</span><span class="pln"> </span><span class="typ">Containers</span><span class="pln"> 
+</span><span class="pun">-</span><span class="typ">Hide</span><span class="pln"> </span><span class="typ">Legends</span><span class="pln">
+</span><span class="pun">-</span><span class="typ">Workbook</span><span class="pln"> </span><span class="typ">Formatting</span></code></pre>
+</blockquote><div class="moreKnowledge"><a href="https://labondemand.com/LabProfile/Instructions/137513#" class="moreKnowledgeLink" style="display: none;">more...</a></div></div></div>
+    </div>
+    <input type="hidden" id="rawContent" value="#Welcome @lab.User.FirstName!
+
+Thank you for joining us for &quot;What you Should know about Tableau that you don&#39;t Know about Tableau&quot;!
+
+This side panel will contain all the Step-by-Step Instructions, Resources links, and helpful tips required to complete this course. Feel free to follow along, as  
+
+To get started log into the virtual machine provided please use +++**@lab.VirtualMachine(Windows10Base-TC2023).Username**+++ and the password +++**@lab.VirtualMachine(Windows10Base-TC2023).Password**+++
+
+Notice the green test above?  You an click that and the machine will type that text whereever the cursor is targeted.
+
+At this time please enjoy the lab and click around, this is your isolated instance and nothing you do will persist unless you capture a differencing disk.  And we&#39;ll get into that during our training!
+
+Thanks for being part of TC 23 and we look forward to this journey together.
+
+    Important Hot Keys for this Session
+
+        Copy
+            - Windows: CTRL + C
+            - Mac: Command + C
+        
+        Paste
+            - Windows: CTRL + P
+            - Mac: Command + P
+
+        Preselect Agg
+            - Windows: Right Click + Drag
+            - Mac: Command + Option + One Finger Click + Drag
+
+        Duplicate
+            - Windows: CTRL + Left Click +  Drag
+            - Mac: Command + One Finger Click + Drag
+
+
+===
+#Rounded Bar Chart#
+1) **Rounded Bar Chart** 
+
+Steps:
+
+- [] 1.1) Double Click **[SALES]**
+- [] 1.2) Double Click **[Sub-Category]** 
+- [] 1.3) Select _Rotate Axis_ button !IMAGE[0r4q5h2o.jpg](0r4q5h2o.jpg) &amp; _Sort Button_ (Desc) !IMAGE[az0n5nxe.jpg](az0n5nxe.jpg)
+- [] 1.4) Place **[Profit]** on Color (Or drop directly on Canvas)
+- [] 1.5) Under Analysis, select: “**Create Calculated Field**” and create calculation “**[Min(0)]**”
+- [] 1.6) Place **[Measure Names]** onto Filters (keep only **[SALES]** and **[MIN(0)]**) THEN place **[Measure Names]** again on Columns
+- [] 1.7) Place **[Measure Values]** on Rows
+- [] 1.8) Change chart type to __*Line*__ on the Marks Card
+- [] 1.9) Place **[Measure Names]** onto Path
+
+&gt;[!knowledge]---
+    What we learned:
+        -Show Me Selections
+        -Measure Values to Filters
+        -Double Click Order of Operations
+        -Rounded bar chart
+
+===
+#Map#
+2) **Map**
+
+Steps:
+- [] 2.1) Right Click **[Location String]** and select *Transform* → *Custom Split*
+- [] 2.2) Under *Separator* Enter a comma ( , ) → Change *Split Off* from *&quot;First&quot;* to *&quot;All&quot;*
+- [] 2.3) Right Click to Rename Fields 
+    - ***Location String - Split 1* → *Region* **
+    - ***Location String - Split 2* → *State* **
+    - ***Location String - Split 3* → *City* **
+    - ***Location String - Split 4* → _Delete This Split_**
+- [] 2.4) Right Click fields again to change Geographic Role 
+    - ***State* → *State/Province* **
+    - ***Region* → *Create From* → *State* **
+    - ***City* → *City* **
+- [] 2.5) Double Click on **[State]**
+- [] 2.6) Add **[Profit]** to Color 
+- [] 2.7) At the top of the screen, select **Map** → **Background Layers**
+- [] 2.8) Deselect all checked boxes
+- [] 2.9) Right Click on *&quot;1) Rounded Bar Chart&quot;* and select *Copy Formatting* then Right click on the current sheet and select *&quot;Paste Formatting&quot;*
+&gt;[!knowledge]---
+    What we learned:
+    - Quick string Transformations
+    - Map formatting
+    - Quick Map creation 
+    - Fast fact-check 
+===
+#Map Drill Down#
+
+3) **Map Drill Down**
+Steps: 
+
+- [] 3.1) Right Click the *&quot;Map&quot;* Sheet and select *Duplicate*
+- [] 3.2) Drag **[City]** over the map and place on the pop up menu *Map Layers* in the top left corner
+- [] 3.3) On the marks card, select the *State* Tab and double click a blank space on the Marks Card to pull up the In Shelf Editor and type “1” and press enter
+- [] 3.4) Remove **[Profit]** from color on the *&quot;State&quot;* Tab
+- [] 3.5) Click the Color button on the marks card, under the *&quot;State&quot;* Tab and select &quot;More Colors&quot; 
+- [] 3.6) Select *&quot;Pick screen color&quot;* and click on any item on your screen to set that color as the background
+!IMAGE[34ly78cu.jpg](34ly78cu.jpg)
+- [] 3.6) Select the City Tab and Place **[Profit]** on Color and **[Sales]** on Size
+&gt;[!knowledge]---
+    What we learned:
+    -Map Layers 
+    -Map Shading Techniques 
+    -Create calcs in shelf
+    -Pick Screen Color
+===
+#Heat Map#
+
+4) **Heat Map**
+Steps: 
+- [] 4.1) Right click drag (For Mac: Option + Command + Left Click)  **[Order Date]** on to Columns and select *YEARS* when prompted
+- [] 4.2) Hold the *CTRL* button (Command on Mac) + left click and drag **[Year(Order Date)]** onto rows
+- [] 4.3) Change the aggregation from *YEAR* to *Month* for the Pill on *Rows*
+- [] 4.4) Place **[Sales]** onto Color
+- [] Optional: Select the *color* button on the marks card and add a border that matches your background
+&gt;[!knowledge]---
+    What we learned:
+    -Custom Heat Map
+    -Right Click Drag to preselect aggregation!
+    -Duplicate Fields with CTRL + Drag 
+    
+
+===
+#Shout Out#
+5) **Shout Out**
+
+Steps: 
+- [] 5.1) Double Click **[Measure Names]**
+- [] 5.2) Drag **[Measure Names]** to the Filters Shelf and deselect everything Except: **[Sales], [Profit], [Quantity], [Discount]**
+- [] 5.3) *CTRL + Drag* **[Measure Names]** to Text
+- [] 5.4) Click the *Text Button* on the *Marks Card* select *alignment* and align the text to *CENTER* and *MIDDLE* respectively 
+- [] 5.5) Edit the Text and Change the **[Measure Values]** and **[Measure Names]** Fields to your liking (we suggest Increasing the font size of **[Measure Values]** and changing the color of **[Measure Names]**
+- [] 5.4) Right Click **[Discount]** on the fields shelf and select:
+    -  Default Properties → *Aggregation* → *Average*
+    -  Default Properties → *Number Format* → *Percent* → 0 decimal points
+- [] 5.5) At the top of the screen change the view from *“Standard”* to *“Entire View”* 
+
+&gt;[!knowledge]---
+    What we learned:
+    -Custom Shout out View
+    -Text Formatting
+    -Default Formatting
+
+===
+#Bump Chart#
+6) **Bump Chart - Part. 1**
+Steps:
+- [] 6.1) Right Click Drag **[Order Date]** to Columns and select *“Year Order Date”*
+- [] 6.2) Place **[Sales]** on to the Marks Card
+- [] 6.3) Place **[Region]** on to the Marks Card
+- [] 6.3) Double click the white space on Rows and type: *Index()*
+- [] 6.4) Materialize this Calculation by using *CTRL + Drag* to place it on the Fields Shelf
+- [] 6.5) Right Click the **[Index]** Field on Rows and Select “Edit Table Calculation”
+- [] 6.6) In the Table Calculation Editor under “Compute Using” select *Specific* *Dimension*
+- [] 6.7) Make sure the boxes next to “Year of Order Date” and “Region” are both Selected
+- [] 6.8) Make the specified selections for the following menu options: 
+    - At the Level → Deepest
+    - Restarting every → Year of Order Date
+    - Sort Order → Custom Sort → **[Sales]** → *SUM* → *Desc*
+    -!IMAGE[zeb160b4.jpg](zeb160b4.jpg)
+- [] 6.9) Add the **[region]** field on color
+===
+6) **Bump Chart - Part. 2**
+
+- [] 6.10) Edit the Axis on the left hand side by right clicking on the axis and selecting the edit option. Click the checkbox labeled &quot;Reverse&quot;
+- [] 6.11) Duplicate the **[Index]** function on rows by using  CTRL + Drag  and dragging the copy to it&#39;s right
+- [] 6.12) Right click the **[Index]** pill on the left hand side and select “Dual Axis”
+- [] 6.13) Right click on the left hand Axis on the view and select *“Synchronize axis”* from the pop up menu
+- [] 6.14) hide the axis by right clicking and selecting “Hide Axis”
+- [] 6.15) Under the second *“Index”* tab on the Marks Card, change the view type from *“Line”* to *“Circle”* by clicking the drop down
+
+&gt;[!knowledge]---
+    What we learned:
+    -Bump Chart
+    -Index function
+    -Dual Axis
+    -Materialize Calculations
+===
+#Calendar#
+7) **Calendar - Part. 1**
+Steps:
+- [] 7.1) Right Click Drag **[Order Date]** to Columns and select *Month of Order Date*
+- [] 7.2) Using *CTRL + Drag*, duplicate **[MONTH(Order Date)]** twice placing the new copies to the right of the original
+- [] 7.3) change the aggregations to *YEAR* and *WEEKDAY*  respectively (weekday is located under the &quot;more&quot; option) 
+- [] 7.4) Use *CTRL + Drag*  one more time except instead of adding the copy to columns, add the new pill to rows and change the aggregation to *WEEK* (*WEEK* is located under the &quot;more&quot; option but label *WEEK NUMBER*)
+- [] 7.5) Add **[Sales]** OR **[Profit]** onto Color
+!IMAGE[lpyhq6wp.jpg](lpyhq6wp.jpg)
+- [] 7.6) Right Click Drag **[Order Date]** to the filters shelf and select “Month / Year“. Filter to any Date
+
+===
+7) **Calendar - Part. 2**
+- [] 7.7) Create a new sheet and select the Data Source *&quot;Data Scaffold&quot;* in the top left corner
+- [] 7.8) Place the field **[Date]** on rows then right click the pill to change the aggregation: 
+    - **Exact Date → Discrete**
+    - !IMAGE[wab6r9g8.jpg](wab6r9g8.jpg)
+- [] 7.9) While holding the *Shift Key* Select the top row and bottom row to highlight every cell in the column and use the keyboard shortcut CTRL + C (Command + C on Mac) to copy the Table
+- [] 7.10) Return to the Data source view for our “Sample Superstore” Data source and use the shortcut CTRL + V (Command + V) to Paste in the new data.
+- [] 7.11) Link the new data set to Superstore using **[Order Date]** = **[Date]** 
+- [] 7.12) Return to the *&quot;Calendar Sheet&quot;*. On the shelf, right click the field **[Order Date]** and select the *“Replace Reference”* option. when prompted replace **[Order Date]** with **[Date]**
+- [] 7.13) Add DAY **[Date]** onto text 
+
+&gt;[!knowledge]---
+    What we learned:
+    -Copy and Paste Data Set 
+    -Replace Reference
+    -Calendar Chart Type
+===
+#Bonus: Viz in Tooltip#
+8) **Viz In Tooltip**
+Steps:
+- [] 8.1) Double Click (in order) on the following fields:  **[Customer Name], [Order ID], [Product Name], [Sales], [Profit], [Discount]**
+- [] 8.2) Change fit from “Standard“ to ”Fit Entire View“ 
+- [] 8.3) Navigate to the calendar sheet and select the *tooltip* button on the marks card to edit the tooltip
+- [] 8.4) clear the tool tip and select the *“Insert”* drop down. Select the sheet titled *“Tooltip”* to insert the sheet into the tooltip 
+- [] 8.5) In the embedd string, edit the &quot;maxwidth&quot; to be 500 or higher
+
+&gt;[!knowledge]---
+    What we learned:
+    -Viz in Tooltip
+
+===
+#All Together Now! Building our Dashboard#
+
+9) **Building Our Dashboard**
+
+Steps: 
+- [] 9.1) At the top of the screen, select the Dashboard tab → Format → Background and choose a background color of your choice from the dropdown on the lefthand side.
+- [] 9.2) Drag out the “Map” sheet and place it on the dashboard
+- [] 9.3) Drag out the “Shout Out” Sheet and place it above the map
+- [] 9.4) Toggle the “Tiled/Floating” button on the bottom so that “Floating” is selected. Drag our a horizontal container
+- [] 9.5) Change the Tiled/Floating button back to tiled, and place the Rounded Bar Chart, Bump Chart, and Heat Map, sheets into the container 
+- [] 9.6) highlight the container by double clicking it and then select the drop down in the top right corner. Change the type from “Floating” to “Tiled”
+- [] 9.7) After the Container has snapped onto the grid, select it and drag it under our map
+- [] 9.8) Change the toggle back to “Floating” and drag the “Map Drilldown” Sheet to the left of the map and the “Calendar Sheet” to the right of the map. 
+
+&gt;[!knowledge]---
+    What we learned:
+    -Arrangement Via Containers 
+    -Hide Legends
+    -Workbook Formatting
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ ">
+    <input type="hidden" id="activities" value="[{&quot;Id&quot;:153559,&quot;ActivityGroupId&quot;:null,&quot;ReplacementTokenAlias&quot;:&quot;ScoringFramework&quot;,&quot;Type&quot;:40,&quot;Name&quot;:&quot;Advanced Scoring Framework Example&quot;,&quot;Text&quot;:null,&quot;OnDemandEvaluation&quot;:true,&quot;OnDemandEvaluationButtonText&quot;:null,&quot;OnDemandEvaluationButtonBelowTaskList&quot;:true,&quot;DisplayScriptsAsTaskList&quot;:true,&quot;Answers&quot;:[],&quot;Scripts&quot;:[{&quot;Id&quot;:85139,&quot;Text&quot;:&quot;This uses the Skillable PBT framework.&quot;}],&quot;CodeTests&quot;:[],&quot;CodeLanguagesJSON&quot;:null,&quot;Results&quot;:[]},{&quot;Id&quot;:153560,&quot;ActivityGroupId&quot;:8073,&quot;ReplacementTokenAlias&quot;:&quot;SimpleScript&quot;,&quot;Type&quot;:40,&quot;Name&quot;:&quot;Simple Script Check&quot;,&quot;Text&quot;:null,&quot;OnDemandEvaluation&quot;:true,&quot;OnDemandEvaluationButtonText&quot;:null,&quot;OnDemandEvaluationButtonBelowTaskList&quot;:true,&quot;DisplayScriptsAsTaskList&quot;:true,&quot;Answers&quot;:[],&quot;Scripts&quot;:[{&quot;Id&quot;:85140,&quot;Text&quot;:&quot;Verify that a Windows Registry Key is set to a specific value.&quot;},{&quot;Id&quot;:85141,&quot;Text&quot;:&quot;Verify that a file exists.&quot;}],&quot;CodeTests&quot;:[],&quot;CodeLanguagesJSON&quot;:null,&quot;Results&quot;:[]}]">
+    <input type="hidden" id="activityGroups" value="[{&quot;Id&quot;:8073,&quot;Alias&quot;:&quot;examples&quot;,&quot;Name&quot;:&quot;Examples&quot;,&quot;Randomize&quot;:false,&quot;NumActivitiesToDisplay&quot;:null,&quot;Scored&quot;:false,&quot;ActivityScoreValue&quot;:1,&quot;OnDemandEvaluation&quot;:true,&quot;OnDemandEvaluationButtonText&quot;:null}]">
+    <input type="hidden" id="replacementTokens" value="[{&quot;Token&quot;:&quot;@lab.LabProfile.Id&quot;,&quot;Replacement&quot;:&quot;137513&quot;},{&quot;Token&quot;:&quot;@lab.CtrlAltDelete&quot;,&quot;Replacement&quot;:&quot;&lt;a href=&#39;#&#39; class=&#39;ctrlAltDeleteLink&#39;&gt;Ctrl+Alt+Delete&lt;/a&gt;&quot;},{&quot;Token&quot;:&quot;@lab.VirtualMachine(Windows10Base-TC2023).SelectLink&quot;,&quot;Replacement&quot;:&quot;&lt;a href=&#39;#&#39; class=&#39;selectMachineLink&#39; data-data=&#39;218394&#39;&gt;Windows 10 Base - TC2023&lt;/a&gt;&quot;},{&quot;Token&quot;:&quot;@lab.VirtualMachine(Windows10Base-TC2023).Username&quot;,&quot;Replacement&quot;:&quot;LabUser&quot;},{&quot;Token&quot;:&quot;@lab.VirtualMachine(Windows10Base-TC2023).Password&quot;,&quot;Replacement&quot;:&quot;Passw0rd!&quot;},{&quot;Token&quot;:&quot;@lab.VirtualMachine(Windows10Base-TC2023).Console&quot;,&quot;Replacement&quot;:&quot;&lt;div class=&#39;virtual-machine-console&#39; data-id=&#39;218394&#39; data-height=&#39;768&#39; data-width=&#39;1024&#39;&gt;&lt;/div&gt;&quot;},{&quot;Token&quot;:&quot;@lab.LabInstance.Id&quot;,&quot;Replacement&quot;:&quot;{LAB_INSTANCE_ID}&quot;},{&quot;Token&quot;:&quot;@lab.LabInstance.GlobalId&quot;,&quot;Replacement&quot;:&quot;{lod_LAB_INSTANCE_ID}&quot;},{&quot;Token&quot;:&quot;@lab.LabInstance.StartDate&quot;,&quot;Replacement&quot;:&quot;20230508&quot;},{&quot;Token&quot;:&quot;@lab.User.Id&quot;,&quot;Replacement&quot;:&quot;{USER_ID}&quot;},{&quot;Token&quot;:&quot;@lab.User.FirstName&quot;,&quot;Replacement&quot;:&quot;{USER_FIRSTNAME}&quot;},{&quot;Token&quot;:&quot;@lab.User.LastName&quot;,&quot;Replacement&quot;:&quot;{USER_LASTNAME}&quot;},{&quot;Token&quot;:&quot;@lab.User.Email&quot;,&quot;Replacement&quot;:&quot;{EMAIL}&quot;},{&quot;Token&quot;:&quot;@lab.User.ExternalId&quot;,&quot;Replacement&quot;:&quot;{USER_EXTERNALID}&quot;},{&quot;Token&quot;:&quot;@lab.User.Organization.Id&quot;,&quot;Replacement&quot;:&quot;{USER_ORGANIZATION_ID}&quot;},{&quot;Token&quot;:&quot;@lab.User.Organization.Name&quot;,&quot;Replacement&quot;:&quot;{USER_ORGANIZATION_NAME}&quot;},{&quot;Token&quot;:&quot;@lab.Tag&quot;,&quot;Replacement&quot;:&quot;{TAG}&quot;}]">
+    <input type="hidden" id="replacements">
+    <input type="hidden" id="variables" value="{&quot;difficulty&quot;:&quot;Guided&quot;,&quot;cloudEnvironment&quot;:&quot;None&quot;,&quot;advanced&quot;:&quot;Automations&quot;,&quot;format&quot;:&quot;Challenge&quot;}">
+
+    <textarea id="copyInput" value="" style="position: absolute; left:-10000px; top:-10000px; "></textarea>
+
+    <div id="Model" data-id="137513" data-contentroot="https://labondemand.blob.core.windows.net/content/lab137513/" data-scrolltop="" data-themescript="">
+
+
+
+</div></body></html>
